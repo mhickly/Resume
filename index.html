@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)file:///C:/Users/I843698/Downloads/index%20(9).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michael Hickly - Resume</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --primary: #0B1F3A;
+    --accent: #2b6cb0;
+    --text: #1a202c;
+    --text-light: #4a5568;
+    --bg-sidebar: #EDF2F7;
+    --sidebar-text: #2d3748;
+    --sidebar-heading: #0B1F3A;
+    --border: #cbd5e0;
+    --bg-main: #ffffff;
+  }
+
+  html { font-size: 13px; }
+
+  body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    color: var(--text);
+    background: #f0f0f0;
+    line-height: 1.5;
+  }
+
+  .page {
+    width: 8.5in;
+    min-height: 11in;
+    margin: 0 auto;
+    background: var(--bg-main);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.12);
+  }
+
+  /* ── HERO BANNER ── */
+  .hero {
+    grid-column: 1;
+    position: relative;
+    background: linear-gradient(135deg, #091B30 0%, #0D2240 40%, #163A5F 100%);
+    text-align: center;
+    padding: 0.55in 0.4in 0.5in 0.4in;
+    overflow: hidden;
+  }
+
+  .hero canvas {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .hero .static-dots {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.12;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.10em;
+    margin-bottom: 0.2rem;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.25);
+  }
+
+  .hero .tagline {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.8);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  .body-wrap {
+    display: grid;
+    grid-template-columns: 2.4in 1fr;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    background: var(--bg-sidebar);
+    color: var(--sidebar-text);
+    padding: 0.35in 0.3in 0.4in 0.3in;
+    border-right: 1px solid #dee2e8;
+  }
+
+  .sidebar-section {
+    margin-bottom: 0.5rem;
+  }
+
+  .sidebar-section h2 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    border-bottom: 1px solid #cbd5e0;
+    padding-bottom: 0.2rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .contact-list {
+    list-style: none;
+  }
+
+  .contact-list li {
+    font-size: 0.82rem;
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .contact-list li .icon {
+    flex-shrink: 0;
+    width: 14px;
+    text-align: center;
+    margin-top: 1px;
+    opacity: 0.5;
+  }
+
+  .contact-list a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .contact-list a:hover {
+    text-decoration: underline;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .skill-tag {
+    background: rgba(43,108,176,0.1);
+    color: #2d3748;
+    font-size: 0.72rem;
+    padding: 0.18rem 0.45rem;
+    border-radius: 3px;
+    font-weight: 500;
+    display: block;
+    border-left: 2px solid var(--accent);
+  }
+
+  .education-item h3 {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--sidebar-heading);
+    margin-bottom: 0.08rem;
+  }
+
+  .education-item p {
+    font-size: 0.78rem;
+    color: var(--sidebar-text);
+  }
+
+  /* ── MAIN ── */
+  .main {
+    padding: 0.35in 0.4in 0.4in 0.35in;
+  }
+
+  .summary-heading {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 0.2rem;
+  }
+
+  .summary {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.55;
+    margin-bottom: 0.45rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+
+  .section-heading {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 0.35rem;
+    margin-top: 0.15rem;
+  }
+
+  /* ── TIMELINE ── */
+  .experience-timeline {
+    padding-left: 1.1rem;
+  }
+
+  .company-group {
+    position: relative;
+  }
+
+  .company-group .job {
+    border-left: 2px solid rgba(43,108,176,0.3);
+    margin-left: 0.25rem;
+    padding-left: 0.85rem;
+  }
+
+  .company-group .job:last-child {
+    border-left-color: transparent;
+  }
+
+  .job {
+    margin-bottom: 0.42rem;
+    page-break-inside: avoid;
+    position: relative;
+  }
+
+  .job::before {
+    content: '';
+    position: absolute;
+    left: -1.15rem;
+    top: 0.32rem;
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    border: 2px solid var(--bg-main);
+    box-shadow: 0 0 0 1.5px var(--accent);
+  }
+
+  .company-group .job::before {
+    left: -0.55rem;
+  }
+
+  .company-group .job:first-child::before {
+    width: 10px;
+    height: 10px;
+    left: -0.6rem;
+    top: 0.28rem;
+  }
+
+  .job-header {
+    margin-bottom: 0.15rem;
+  }
+
+  .job-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.3;
+  }
+
+  .job-meta {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    margin-top: 0.03rem;
+  }
+
+  .job ul {
+    margin: 0.12rem 0 0 1.1rem;
+    list-style: disc;
+  }
+
+  .job ul li {
+    font-size: 0.8rem;
+    margin-bottom: 0.12rem;
+    line-height: 1.45;
+    color: var(--text);
+  }
+
+  /* ── MOBILE ── */
+  @media screen and (max-width: 700px) {
+    html { font-size: 14px; }
+
+    .page {
+      width: 100%;
+      min-height: auto;
+      box-shadow: none;
+    }
+
+    .hero {
+      padding: 1.5rem 1.2rem 1.3rem;
+    }
+
+    .hero h1 {
+      font-size: 1.5rem;
+      letter-spacing: 0.06em;
+    }
+
+    .hero .tagline {
+      font-size: 0.8rem;
+    }
+
+    .body-wrap {
+      display: block;
+    }
+
+    .sidebar {
+      border-right: none;
+      border-bottom: 1px solid #dee2e8;
+      padding: 1rem 1.2rem;
+    }
+
+    .sidebar-section {
+      margin-bottom: 0.8rem;
+    }
+
+    .skill-tags {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+
+    .skill-tag {
+      border-left: none;
+      border-bottom: 2px solid var(--accent);
+      padding: 0.2rem 0.5rem;
+      font-size: 0.7rem;
+    }
+
+    .main {
+      padding: 1rem 1.2rem 2rem;
+    }
+
+    .job ul {
+      margin-left: 0.9rem;
+    }
+  }
+
+  /* ── PRINT / PDF ── */
+  @media print {
+    html { font-size: 12.5px; }
+    body { background: white; }
+    .page {
+      box-shadow: none;
+      margin: 0;
+      width: 100%;
+      min-height: auto;
+    }
+    .hero canvas { display: none; }
+    .hero .static-dots { display: block; }
+    .body-wrap {
+      display: block;
+    }
+    .sidebar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.15in 0.4in;
+      padding: 0.2in 0.3in;
+      border-right: none;
+      border-bottom: 1px solid #cbd5e0;
+    }
+    .sidebar-section {
+      margin-bottom: 0;
+    }
+    .sidebar-section h2 {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0.12rem;
+    }
+    .skill-tags {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.15rem;
+    }
+    .skill-tag {
+      border-left: none;
+      padding: 0.1rem 0.35rem;
+      font-size: 0.68rem;
+    }
+    .main {
+      padding: 0.25in 0.3in 0.4in 0.3in;
+    }
+  }
+
+  @media screen {
+    .hero .static-dots { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ══════ HERO BANNER ══════ -->
+  <div class="hero">
+    <canvas id="dotCanvas" width="1020" height="200" style="width: 816px; height: 160px;"></canvas>
+    <svg class="static-dots" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 816 130">
+      <circle cx="60" cy="30" r="2.2" fill="#fff"></circle><circle cx="150" cy="70" r="1.8" fill="#fff"></circle>
+      <circle cx="240" cy="25" r="2.5" fill="#fff"></circle><circle cx="330" cy="85" r="1.6" fill="#fff"></circle>
+      <circle cx="410" cy="40" r="2.0" fill="#fff"></circle><circle cx="500" cy="95" r="2.3" fill="#fff"></circle>
+      <circle cx="580" cy="35" r="1.7" fill="#fff"></circle><circle cx="660" cy="80" r="2.1" fill="#fff"></circle>
+      <circle cx="740" cy="20" r="1.9" fill="#fff"></circle><circle cx="100" cy="100" r="1.5" fill="#fff"></circle>
+      <circle cx="200" cy="55" r="2.0" fill="#fff"></circle><circle cx="300" cy="110" r="1.8" fill="#fff"></circle>
+      <circle cx="450" cy="15" r="2.2" fill="#fff"></circle><circle cx="550" cy="105" r="1.6" fill="#fff"></circle>
+      <circle cx="700" cy="55" r="2.4" fill="#fff"></circle><circle cx="780" cy="100" r="1.5" fill="#fff"></circle>
+      <circle cx="40" cy="75" r="1.4" fill="#fff"></circle><circle cx="370" cy="60" r="1.9" fill="#fff"></circle>
+      <circle cx="620" cy="65" r="1.7" fill="#fff"></circle><circle cx="130" cy="15" r="2.0" fill="#fff"></circle>
+      <line x1="60" y1="30" x2="150" y2="70" stroke="#fff" stroke-width="0.5"></line>
+      <line x1="150" y1="70" x2="240" y2="25" stroke="#fff" stroke-width="0.5"></line>
+      <line x1="240" y1="25" x2="330" y2="85" stroke="#fff" stroke-width="0.5"></line>
+      <line x1="330" y1="85" x2="410" y2="40" stroke="#fff" stroke-width="0.5"></line>
+      <line x1="410" y1="40" x2="500" y2="95" stroke="#fff" stroke-width="0.5"></line>
+      <line x1="500" y1="95" x2="580" y2="35" stroke="#fff" stroke-width="0.5"></line>
+      <line x1="580" y1="35" x2="660" y2="80" stroke="#fff" stroke-width="0.5"></line>
+      <line x1="660" y1="80" x2="740" y2="20" stroke="#fff" stroke-width="0.5"></line>
+      <line x1="100" y1="100" x2="200" y2="55" stroke="#fff" stroke-width="0.5"></line>
+      <line x1="200" y1="55" x2="300" y2="110" stroke="#fff" stroke-width="0.5"></line>
+      <line x1="300" y1="110" x2="370" y2="60" stroke="#fff" stroke-width="0.5"></line>
+      <line x1="370" y1="60" x2="450" y2="15" stroke="#fff" stroke-width="0.5"></line>
+      <line x1="450" y1="15" x2="550" y2="105" stroke="#fff" stroke-width="0.5"></line>
+      <line x1="550" y1="105" x2="620" y2="65" stroke="#fff" stroke-width="0.5"></line>
+      <line x1="620" y1="65" x2="700" y2="55" stroke="#fff" stroke-width="0.5"></line>
+      <line x1="700" y1="55" x2="780" y2="100" stroke="#fff" stroke-width="0.5"></line>
+      <line x1="40" y1="75" x2="130" y2="15" stroke="#fff" stroke-width="0.5"></line>
+      <line x1="130" y1="15" x2="60" y2="30" stroke="#fff" stroke-width="0.5"></line>
+    </svg>
+    <div class="hero-content">
+      <h1>MICHAEL HICKLY</h1>
+      <div class="tagline">Business Intelligence • Analytics • Automation</div>
+    </div>
+  </div>
+
+  <div class="body-wrap">
+
+  <!-- ══════ SIDEBAR ══════ -->
+  <div class="sidebar">
+
+    <!-- CONTACT -->
+    <div class="sidebar-section">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li><span class="icon">✉</span> michaeljhickly@gmail.com</li>
+        <li><span class="icon">⚑</span> Herndon, VA</li>
+        <li><span class="icon">🔗</span> <a href="https://www.linkedin.com/in/michael-hickly-415613133/" target="_blank">LinkedIn Profile</a></li>
+        <li><span class="icon">⚙</span> <a href="file:///C:/Users/I843698/Downloads/Michael_Hickly_Resume.pdf" download="">Download PDF Resume</a></li>
+      </ul>
+    </div>
+
+    <!-- CORE SKILLS -->
+    <div class="sidebar-section">
+      <h2>Core Skills</h2>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Generative AI &amp; Automation</span>
+        <span class="skill-tag">Business Intelligence</span>
+        <span class="skill-tag">Data Analytics</span>
+        <span class="skill-tag">Excel Automation</span>
+        <span class="skill-tag">Dashboard Development</span>
+        <span class="skill-tag">Forecasting</span>
+        <span class="skill-tag">KPI Development</span>
+        <span class="skill-tag">Process Improvement</span>
+        <span class="skill-tag">Revenue &amp; Cost Analysis</span>
+        <span class="skill-tag">Data Visualization</span>
+        <span class="skill-tag">Capacity Planning</span>
+        <span class="skill-tag">Operational Reporting</span>
+      </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="sidebar-section">
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3>B.S. Business Management</h3>
+        <p>Point Park University</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ MAIN ══════ -->
+  <div class="main">
+
+    <div class="summary-heading">Summary</div>
+    <div class="summary">
+      Senior Business Analyst with experience in business intelligence, automation, forecasting, and operational analytics. I support global leadership with reporting and analysis used to understand performance, identify problems, and make business decisions. Strong experience using Python, AI tools, Excel, and data visualization to automate manual processes and turn complex operational data into useful reporting.
+    </div>
+
+    <div class="section-heading">Professional Experience</div>
+
+    <div class="experience-timeline">
+    <div class="company-group">
+    <!-- JOB 1 -->
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Senior Business Analyst, Ariba Network Operations</div>
+        <div class="job-meta">SAP Ariba — Herndon, VA &nbsp;|&nbsp; May 2020 – Present</div>
+      </div>
+      <ul>
+        <li>Provide business intelligence and analytics for 60 managers globally, supporting decisions around performance, productivity, revenue, staffing, and operational priorities.</li>
+        <li>Built and manage a portfolio health reporting program for 20+ global managers, consolidating multiple operational data sources into individualized dashboards with approximately 60 pivot tables, charts, and performance metrics.</li>
+        <li>Developed Python automation to generate customized monthly dashboards for individual managers, including data preparation, business logic, manager-level filtering, workbook updates, pivot refreshes, file protection, and report creation.</li>
+        <li>Use Python and generative AI tools to automate recurring analytical work, troubleshoot reporting processes, and build tools that would otherwise require significant manual effort.</li>
+        <li>Combine and analyze data across onboarding, catalog, integration, transaction, backlog, revenue, and customer datasets to provide a more complete view of operational performance.</li>
+        <li>Develop and maintain KPIs covering network revenue, productivity, supplier enablement, transaction readiness, escalations, aging, and customer performance.</li>
+        <li>Forecast onboarding, catalog, integration, and other network activity to support capacity and resource planning.</li>
+        <li>Analyze operational trends and bottlenecks to identify areas for process improvement and management intervention.</li>
+        <li>Led a cost-benefit analysis used in negotiations for a third-party supplier enablement contract.</li>
+        <li>Partner with operations, portfolio management, product, and leadership teams on reporting requirements, ad hoc analysis, and process improvements.</li>
+      </ul>
+    </div>
+
+    <!-- JOB 2 -->
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Senior Manager, Global Supplier Program Coordinator</div>
+        <div class="job-meta">SAP Ariba — Pittsburgh, PA &nbsp;|&nbsp; April 2018 – May 2020</div>
+      </div>
+      <ul>
+        <li>Led a team of project managers providing supplier enablement strategy and consulting for customers implementing SAP Ariba solutions.</li>
+        <li>Oversaw a global portfolio of approximately 600 buyer programs connecting thousands of suppliers each year.</li>
+        <li>Built a global capacity planning tool to forecast workload and headcount needs.</li>
+        <li>Developed dashboards used to track employee performance, customer activity, and operational results.</li>
+        <li>Established a Quality Management Specialist role and implemented a Qualtrics-based customer satisfaction program.</li>
+      </ul>
+    </div>
+
+    <!-- JOB 3 -->
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Senior Manager, Seller Enablement EMEA</div>
+        <div class="job-meta">SAP Ariba — Prague, Czech Republic &nbsp;|&nbsp; February 2017 – January 2018</div>
+      </div>
+      <ul>
+        <li>Led multiple teams responsible for connecting approximately 18,000 suppliers to buyer customers across EMEA.</li>
+        <li>Introduced standardized customer scorecards and action plans to improve visibility into program performance and customer satisfaction.</li>
+        <li>Worked across global teams to standardize processes and share best practices.</li>
+      </ul>
+    </div>
+
+    <!-- JOB 4 -->
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Manager, Supplier Program Coordinator</div>
+        <div class="job-meta">SAP Ariba — Pittsburgh, PA &nbsp;|&nbsp; June 2015 – February 2017</div>
+      </div>
+      <ul>
+        <li>Planned and executed the migration of more than 95 projects to a new CRM platform.</li>
+        <li>Worked across teams to design management dashboards and improve customer reporting.</li>
+        <li>Received SAP Ariba University's Most Innovative Idea of the Year award in 2016.</li>
+      </ul>
+    </div>
+
+    <!-- JOB 5 -->
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Supplier Program Coordinator</div>
+        <div class="job-meta">SAP Ariba — Pittsburgh, PA &nbsp;|&nbsp; July 2014 – June 2015</div>
+      </div>
+      <ul>
+        <li>Managed supplier enablement projects across North America, EMEA, and APAC.</li>
+        <li>Served as a team subject matter expert and supported peers on complex projects.</li>
+      </ul>
+    </div>
+    </div><!-- /company-group SAP Ariba -->
+
+    <!-- JOB 6 -->
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Quality Control Supervisor / Quality Control Analyst</div>
+        <div class="job-meta">ServiceLink — Coraopolis, PA &nbsp;|&nbsp; December 2008 – July 2014</div>
+      </div>
+      <ul>
+        <li>Researched property issues using appraisal, tax, assessor, plat map, and property-record information and prepared findings for banking clients.</li>
+        <li>Managed UAT for a two-year technology implementation that resulted in the successful launch of a new system.</li>
+        <li>Reworked system rules that reduced the dispute rate by approximately 5% and generated about $50,000 in annual savings.</li>
+      </ul>
+    </div>
+
+    </div><!-- /experience-timeline -->
+
+  </div><!-- /main -->
+  </div><!-- /body-wrap -->
+</div><!-- /page -->
+
+<script>
+(function() {
+  const canvas = document.getElementById('dotCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const hero = canvas.parentElement;
+
+  let W, H, dots = [];
+  const DOT_COUNT = 40;
+  const MAX_DIST = 120;
+
+  function resize() {
+    W = hero.offsetWidth;
+    H = hero.offsetHeight;
+    canvas.width = W * window.devicePixelRatio;
+    canvas.height = H * window.devicePixelRatio;
+    canvas.style.width = W + 'px';
+    canvas.style.height = H + 'px';
+    ctx.setTransform(window.devicePixelRatio, 0, 0, window.devicePixelRatio, 0, 0);
+  }
+
+  function initDots() {
+    dots = [];
+    for (let i = 0; i < DOT_COUNT; i++) {
+      dots.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        r: Math.random() * 1.5 + 1
+      });
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+
+    for (let i = 0; i < dots.length; i++) {
+      for (let j = i + 1; j < dots.length; j++) {
+        const dx = dots[i].x - dots[j].x;
+        const dy = dots[i].y - dots[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < MAX_DIST) {
+          const alpha = (1 - dist / MAX_DIST) * 0.15;
+          ctx.strokeStyle = 'rgba(255,255,255,' + alpha + ')';
+          ctx.lineWidth = 0.6;
+          ctx.beginPath();
+          ctx.moveTo(dots[i].x, dots[i].y);
+          ctx.lineTo(dots[j].x, dots[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    for (const d of dots) {
+      ctx.fillStyle = 'rgba(255,255,255,0.25)';
+      ctx.beginPath();
+      ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  function update() {
+    for (const d of dots) {
+      d.x += d.vx;
+      d.y += d.vy;
+      if (d.x < 0 || d.x > W) d.vx *= -1;
+      if (d.y < 0 || d.y > H) d.vy *= -1;
+    }
+  }
+
+  function loop() {
+    update();
+    draw();
+    requestAnimationFrame(loop);
+  }
+
+  resize();
+  initDots();
+  loop();
+  window.addEventListener('resize', () => { resize(); initDots(); });
+})();
+</script>
+
+
+</body></html>
